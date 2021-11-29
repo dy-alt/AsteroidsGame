@@ -29,6 +29,10 @@ public void draw()
     if(key == 's'){
       mars.accelerate(-0.1);
     }
+    if(key == 'h'){
+     mars.hyperspace();
+      
+    }
   }
    mars.move();
   mars.show();
