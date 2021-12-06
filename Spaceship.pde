@@ -21,5 +21,17 @@ class Spaceship extends Floater
       myCenterX = (int)(Math.random()*360);
       myCenterY = (int)(Math.random()*360);
       myXspeed = myYspeed = 0;
+        mars[0].movetocenter();
+    }
+    public void setPos(double x, double y){
+      myCenterX = x;
+      myCenterY = y;
+    }
+    public void movetocenter() {
+      mars[0].setPos(myCenterX,myCenterY);
+      mars[1].setPos(myCenterX-20, myCenterY+20);
+      mars[2].setPos(myCenterX-40, myCenterY+40);
+      mars[3].setPos(myCenterX+20, myCenterY-20);
+      mars[4].setPos(myCenterX+40,myCenterY-40);
     }
 }
