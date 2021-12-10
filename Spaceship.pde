@@ -16,22 +16,17 @@ class Spaceship extends Floater
       myXspeed = 0;
       myYspeed = 0;
       myPointDirection = 0;
+      
     }
     public void hyperspace(){
       myCenterX = (int)(Math.random()*360);
       myCenterY = (int)(Math.random()*360);
       myXspeed = myYspeed = 0;
-        mars[0].movetocenter();
     }
-    public void setPos(double x, double y){
-      myCenterX = x;
-      myCenterY = y;
+    public float getX(){
+      return (float)myCenterX;
     }
-    public void movetocenter() {
-      mars[0].setPos(myCenterX,myCenterY);
-      mars[1].setPos(myCenterX-20, myCenterY+20);
-      mars[2].setPos(myCenterX-40, myCenterY+40);
-      mars[3].setPos(myCenterX+20, myCenterY-20);
-      mars[4].setPos(myCenterX+40,myCenterY-40);
+    public float getY(){
+      return (float)myCenterY;
     }
 }
